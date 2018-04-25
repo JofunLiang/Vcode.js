@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>前端生成验证码插件</title>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		
+		<div class="header">
+			<h1>前端生成验证码插件</h1>
+			<h3>The front end generates the verification code plug-in.</h3>
+			<a href="https://github.com/JofunLiang/Vcode.js" class="download">Download</a>
+		</div>
+		
+		<div class="content">
+			<div id="demo1" class="demo">
+				<strong>纯数字模式：</strong>
+				<div class="code"></div>
+				<button type="button">换一个</button>
+			</div>
+			<div id="demo2" class="demo">
+				<strong>纯字母模式：</strong>
+				<div class="code"></div>
+				<button type="button">换一个</button>
+			</div>
+			<div id="demo3" class="demo">
+				<strong>数字和字母混合模式：</strong>
+				<div class="code"></div>
+				<button type="button">换一个</button>
+			</div>
+			<div id="demo4" class="demo">
+				<strong>自定义数据：</strong>
+				<div class="code"></div>
+				<button type="button">换一个</button>
+			</div>
+		</div>
+		
+		<script src="Vcode.js"></script>
+		<script>
+			
+			function $(selector){
+				return document.querySelector(selector)
+			}
+			
+			//demo1
+			var vcode1 = new Vcode({
+				el:"#demo1 .code",
+				count:4,	
+				fontSize:"60px",
+				type:"number",
+				spacing:0
+			});
+			
+			$("#demo1 button").onclick = function(){
+				vcode1.onReset();
+			};
+			
+			//demo2
+			var vcode2 = new Vcode({
+				el:"#demo2 .code",
+				count:4,	
+				fontSize:"60px",
+				type:"letter",
+				spacing:0
+			});
+			
+			$("#demo2 button").onclick = function(){
+				vcode2.onReset();
+			};
+			
+			//demo3
+			var vcode3 = new Vcode({
+				el:"#demo3 .code",
+				count:4,	
+				fontSize:"60px",
+				spacing:0
+			});
+			
+			$("#demo3 button").onclick = function(){
+				vcode3.onReset();
+			};
+			
+			//demo4
+			var vcode4 = new Vcode({
+				el:"#demo4 .code",
+				data:"马蹄声回荡在竹林间千山外江湖边月光纵横云掠过山鹰的背脊他冷眼看繁花乱掷地无声",
+				count:4,	
+				fontSize:"42px",
+				spacing:0
+			});
+			
+			$("#demo4 button").onclick = function(){
+				vcode4.onReset();
+			};
+			
+		</script>
+	</body>
+</html>
