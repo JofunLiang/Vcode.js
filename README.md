@@ -1,4 +1,6 @@
 # Vcode.js
+A lightweight verification code generation plug-in based on native JavaScript development.
+
 一个基于原生JavaScript开发的、轻量的验证码生成插件
 
 V: 1.0.0
@@ -19,6 +21,18 @@ import vcode from 'Vcode'
 const vcode = require('Vcode')
 ```
 Support AMD/CMD/ES6 module standard.
+
+# Examples
+```
+var vcode1 = new Vcode({
+  el:"#demo1 .code",
+  count:4,	
+  fontSize:"60px",
+  type:"number",
+  spacing:0
+});
+
+```
 
 # MIT License
 ### Copyright (c) 2018 jofunLiang
